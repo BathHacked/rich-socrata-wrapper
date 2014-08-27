@@ -1,0 +1,22 @@
+{
+  "name": "bathhacked/rich-socrata-wrapper",
+  "description": "A rich Socrata API wrapper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark Owen",
+      "homepage": "https://twitter.com/azazell0"
+    },
+    {
+      "name": "Bath Hacked",
+      "homepage": "http://www.bathhacked.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzle/guzzle": "~3.9"
+  },
+  "autoload": {
+    "psr-0": {"BathHacked": "src"}
+  }
+}
