@@ -54,7 +54,7 @@ $socrata = new \BathHacked\Socrata(
     '[url-of-your-datastore]',
     '[your-app-token]',
     '[your-username]',
-    '[your-password]
+    '[your-password]'
 );
 ```
 
@@ -307,7 +307,7 @@ If you need to iterate over all rows matching a query (ignoring `limit` & `offse
 
 Each takes a `Closure` which is called for each chunk or row.
 
-Let's copy from one resource to the another & increase the `numeric` field by one.
+Let's copy from one resource to another & increase the `numeric` field by one.
 
 ```php
 $source = $socrata->resource('abcd-efgh')->readOnly();
@@ -369,7 +369,11 @@ We can use `getChunkSize()` & `setChunkSize()` to control the size of the chunks
 If you want to delete all items matching a query (ignoring `limit` & `offset`) you can use `delete()`.
 
 ```php
-$survivors = $destination->where('numeric', '>', '30')->delete()->resetQuery()->all();
+$survivors = $destination
+    ->where('numeric', '>', '30')
+    ->delete()
+    ->resetQuery()
+    ->all();
 
 var_dump($survivors);
 
