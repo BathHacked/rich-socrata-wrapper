@@ -21,18 +21,21 @@ This project is currently a work in progress. Create your own fork if you plan t
 
 ### Via Composer
 
-Add the following to your composer.json `require` & `repositories`
+Add the following to your composer.json `require`, `repositories`, & `minimum-stability`
 
 ```json
-"require": {
-    "bathhacked/rich-socrata-wrapper": "dev-master@dev"
-},
-"repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:BathHacked/rich-socrata-wrapper.git"
-    }
-]
+{
+    "require": {
+        "bathhacked/rich-socrata-wrapper": "dev-master@dev"
+    },
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "git@github.com:BathHacked/rich-socrata-wrapper.git"
+        }
+    ],
+    "minimum-stability": "dev"
+}
 ```
 
 The only dependency is [Guzzle](https://github.com/guzzle/guzzle).
